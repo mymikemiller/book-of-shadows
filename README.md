@@ -1,1 +1,1 @@
-Book of Shadows allows users to keep track of their spells. Other users can serach for, perform and rate them.
+Book of Shadows allows users to submit the spells they've cast and allow other users to review them.
