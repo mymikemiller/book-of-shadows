@@ -1,1 +1,1 @@
-NPM INSTALL IS NEEDED to run
+Book of Shadows allows users to keep track of their spells. Other users can serach for, perform and rate them.
