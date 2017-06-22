@@ -10,7 +10,7 @@ var spellSchema = new Schema({
 
     //  The user who created the spell
     user_id: {
-        type: String, //mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         //ref: "User",
         required: true
     },
@@ -33,8 +33,8 @@ var spellSchema = new Schema({
     // A link to a website containing the original spell
     link: String,
 
-    // The rating for the spell, out of 5
-    rating: Number,
+    // The ratings for the spell, each out of 5
+    // ratings: [Number],
 
     // The difficulty of the spell, out of 5
     difficulty: Number

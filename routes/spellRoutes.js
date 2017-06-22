@@ -5,9 +5,7 @@ var Spell = require("../models/spell");
 
 spellRoutes.route("/")
     .get(function (req, res) {
-        console.log("in GET all request");
         Spell.find(function (err, spells) {
-            console.log("found spells " + spells);
             if (err) return res.status(500).send(err);
             return res.send(spells);
         });
@@ -19,6 +17,25 @@ spellRoutes.route("/")
             return res.status(201).send(spell);
         })
     });
+
+spellRoutes.get("/mine", function (req, res) {
+    Spell.find({
+        user_id: req.user._id
+    }, function (err, spells) {
+        if (err) return res.status(500).send(err);
+        return res.status(500).send(spells);
+    });
+});
+
+spellRoutes.get("/favorites", function (req, res) {
+    User.findOne({
+        _id: req.user._id
+    })
+        .populate("favorites")
+        .exec(function (err, user) {
+            res.send(user.favorites);
+        });
+});
 
 spellRoutes.route("/:id")
     .get(function (req, res) {
