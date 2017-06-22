@@ -1,4 +1,4 @@
-angular.module("BookOfShadows", ["ngRoute"])
+angular.module("BookOfShadowsApp", ["ngRoute"])
 
     .config(["$routeProvider", function($routeProvider) {
         $routeProvider
