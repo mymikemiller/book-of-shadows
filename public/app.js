@@ -7,5 +7,6 @@ angular.module("BookOfShadowsApp", ["ngRoute"])
                 controller: "HomeCtrl"
             })
             .otherwise("/home", {
+                redirectTo: "components/home/home.html"
             })
     }]);

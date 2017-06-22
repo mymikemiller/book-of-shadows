@@ -1,1 +1,1 @@
-NPM INSTALL IS NEEDED to run
+Book of Shadows allows users to submit the spells they've cast and allow other users to search for and review them.
