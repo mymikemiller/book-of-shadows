@@ -7,8 +7,12 @@ angular.module("BookOfShadowsApp", ["ngRoute", "Auth"])
                 controller: "HomeCtrl"
             })
             .when("/spells", {
-                templateUrl: "components/spells/spells.html",
-                controller: "SpellsCtrl"
+                templateUrl: "components/spells/allSpells/allSpells.html",
+                controller: "AllSpellsCtrl"
+            })
+            .when("/myspells", {
+                templateUrl: "components/spells/mySpells/mySpells.html",
+                controller: "MySpellsCtrl"
             })
             .otherwise("/home", {
                 redirectTo: "components/home/home.html"

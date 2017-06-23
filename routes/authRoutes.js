@@ -6,7 +6,6 @@ var config = require("../config");
 
 
 authRoutes.post("/signup", function (req, res) {
-    console.log("in POST");
     User.findOne({email: req.body.email.toLowerCase()}, function (err, existingUser) {
         if (err) return res.status(403).send(err);
         if (existingUser) return res.status(403).send({success: false, message: "That email address is already taken"});
