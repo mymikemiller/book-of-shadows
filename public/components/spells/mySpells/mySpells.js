@@ -6,7 +6,7 @@ app.controller("MySpellsCtrl", ["$scope", "$http", "MySpellsService", function (
     // define and immediately invoke this function when the
     // page loads to get the list of todos from the server
     (function getspells() {
-        MySpellsService.getSpells().then(function (spells) {
+        MySpellsService.getMySpells().then(function (spells) {
             console.log(spells);
             $scope.spells = spells;
         });
@@ -14,7 +14,7 @@ app.controller("MySpellsCtrl", ["$scope", "$http", "MySpellsService", function (
 }]);
 
 app.service("MySpellsService", ["$http", function ($http) {
-    this.getSpells = function () {
+    this.getMySpells = function () {
         return $http.get("/api/spells/mine").then(function (response) {
             return response.data;
         }, function (response) {
