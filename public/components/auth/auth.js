@@ -70,5 +70,4 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
 
             return $q.reject(response);
         }
-
     }]);

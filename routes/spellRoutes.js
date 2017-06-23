@@ -23,8 +23,9 @@ spellRoutes.get("/mine", function (req, res) {
     Spell.find({
         user_id: req.user._id
     }, function (err, spells) {
+        console.log("in mine get error", spells)
         if (err) return res.status(500).send(err);
-        return res.status(500).send(spells);
+        return res.send(spells);
     });
 });
 
