@@ -17,6 +17,7 @@ angular.module("BookOfShadowsApp", ["ngRoute", "Auth"])
             .when("/favoritespells", {
                 templateUrl: "components/spells/favoriteSpells/favoriteSpells.html",
                 controller: "FavoriteSpellsCtrl"
+            })
             .when("/create-spell", {
                 templateUrl: "components/spells/createSpells/createSpells.html",
                 controller: "CreateSpellCtrl"
