@@ -4,6 +4,7 @@ var spellRoutes = express.Router();
 var Spell = require("../models/spell");
 
 spellRoutes.route("/")
+
     .get(function (req, res) {
         Spell.find(function (err, spells) {
             if (err) return res.status(500).send(err);
