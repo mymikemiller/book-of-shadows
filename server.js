@@ -12,8 +12,9 @@ mongoose.connect(config.database, function (err) {
     console.log("Connected to the database");
 });
 
-app.use("/api", expressJWT({secret: config.secret}).unless({path: [{url: "/api/spells", method: "GET"}]}));
 app.use("/users", expressJWT({secret: config.secret}));
+app.use("/api", expressJWT({secret: config.secret}).unless({path: [{url: "/api/spells", methods: ["GET"]}]}));
+
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
