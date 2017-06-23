@@ -20,6 +20,7 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
 
     .service("UserService", ["$http", "TokenService", "$location", function ($http, TokenService, $location) {
         this.signup = function (user) {
+            console.log("in signup. user:", user);
             return $http.post("/auth/signup", user);
         };
 
@@ -31,6 +32,7 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
         };
 
         this.logout = function () {
+            console.log("UserService.logout");
             TokenService.removeToken();
             $location.path("/");
         };
