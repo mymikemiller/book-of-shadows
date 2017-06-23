@@ -12,6 +12,7 @@ mongoose.connect(config.database, function (err) {
     console.log("Connected to the database");
 });
 
+app.use("/users", expressJWT({secret: config.secret}));
 app.use("/api", expressJWT({secret: config.secret}).unless({path: [{url: "/api/spells", methods: ["GET"]}]}));
 
 app.use(morgan("dev"));
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/spells", require("./routes/spellRoutes"));
 app.use("/auth", require("./routes/authRoutes"));
+app.use("/users", require("./routes/userRoutes"));
 
 app.listen(port, function () {
     console.log("Server is running on port " + port);

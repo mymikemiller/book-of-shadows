@@ -10,14 +10,16 @@ angular.module("BookOfShadowsApp", ["ngRoute", "Auth"])
                 templateUrl: "components/spells/allSpells/allSpells.html",
                 controller: "AllSpellsCtrl"
             })
-            .when("/myspells", {
+            .when("/mine", {
                 templateUrl: "components/spells/mySpells/mySpells.html",
                 controller: "MySpellsCtrl"
             })
+            .when("/favoritespells", {
+                templateUrl: "components/spells/favoriteSpells/favoriteSpells.html",
+                controller: "FavoriteSpellsCtrl"
             .when("/create-spell", {
                 templateUrl: "components/spells/createSpells/createSpells.html",
                 controller: "CreateSpellCtrl"
-
             })
             .otherwise("/home", {
                 redirectTo: "components/home/home.html"
