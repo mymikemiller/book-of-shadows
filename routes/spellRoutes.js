@@ -2,6 +2,7 @@ var express = require("express");
 var spellRoutes = express.Router();
 
 var Spell = require("../models/spell");
+var User = require("../models/user");
 
 spellRoutes.route("/")
 

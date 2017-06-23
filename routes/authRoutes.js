@@ -26,6 +26,6 @@ authRoutes.post("/login", function (req, res) {
         var token = jwt.sign(existingUser.toObject(), config.secret);
         return res.send({token: token, user: existingUser.toObject(), success: true, message: "Have a lovely token"});
     });
-});
+})
 
 module.exports = authRoutes;
