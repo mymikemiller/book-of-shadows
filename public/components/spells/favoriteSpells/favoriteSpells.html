@@ -1,9 +1,9 @@
 <h1>Favorite Spells</h1>
 
-<div class="row" ng-model="user">
+<div class="row">
     <div class="col-md-4" ng-repeat="spell in spells">
         <h3>{{spell.name}}</h3>
-        <button ng-click="unfavoriteSpell(user, spell)">Unfavorite this spell</button>
+        <button ng-click="unfavoriteSpell(spell)">Unfavorite this spell</button>
     </div>
 
 </div>
