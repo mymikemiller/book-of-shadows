@@ -25,7 +25,7 @@ spellRoutes.get("/mine", function (req, res) {
     Spell.find({
         user_id: req.user._id
     }, function (err, spells) {
-        console.log("in mine get error", spells)
+        if (err) console.log("in mine get error", spells, err);
         if (err) return res.status(500).send(err);
         return res.send(spells);
     });
@@ -37,6 +37,8 @@ spellRoutes.get("/favorites", function (req, res) {
     })
         .populate("favorites")
         .exec(function (err, user) {
+            if (err) return res.status(500).send(err);
+            console.log("favorites:", user.favorites);
             res.send(user.favorites);
         });
 });
