@@ -7,8 +7,14 @@ app.controller("AllSpellsCtrl", ["$scope", "$http", "SpellsService", function ($
     // page loads to get the list of todos from the server
     (function getspells() {
         SpellsService.getSpells().then(function (spells) {
-            console.log(spells);
             $scope.spells = spells;
+
+            console.log("initial spells: ", spells);
+
+            if (!spells.length) {
+                console.log("Initial spells empty. Initializing with some demo data.");
+                $scope.spells = populateDatabase(SpellsService);
+            }
         });
     })();
 
@@ -25,6 +31,15 @@ app.controller("AllSpellsCtrl", ["$scope", "$http", "SpellsService", function ($
 app.service("SpellsService", ["$http", "UserService", function ($http, UserService) {
     this.getSpells = function () {
         return $http.get("/api/spells").then(function (response) {
+            return response.data;
+        }, function (response) {
+            alert("Error " + response.status + ": " + response.statusText);
+        });
+    };
+
+    this.addSpell = function (spell) {
+        console.log("Attempting to post", spell);
+        return $http.post("/api/spells", spell).then(function (response) {
             return response.data;
         }, function (response) {
             alert("Error " + response.status + ": " + response.statusText);

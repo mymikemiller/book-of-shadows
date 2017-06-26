@@ -13,10 +13,15 @@ spellRoutes.route("/")
         });
     })
     .post(function (req, res) {
+        console.log("In POST");
         var spell = new Spell(req.body);
         spell.user_id = req.user._id;
+        console.log("spell:", spell);
         spell.save(function (err, newSpell) {
-            if (err) return res.status(500).send(err);
+            if (err) {
+                console.log("ERROR!", err);
+                return res.status(500).send(err);
+            }
             return res.status(201).send(spell);
         })
     });
