@@ -18,7 +18,10 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
         $httpProvider.interceptors.push("AuthInterceptor");
     }])
 
-    .service("UserService", ["$http", "TokenService", "$location", function ($http, TokenService, $location) {
+    .service("UserService", ["$http", "TokenService", "$location", "$localStorage", function ($http, TokenService, $location, $localStorage) {
+        this.currentUser = null;
+        var self = this;
+
         this.signup = function (user) {
             console.log("in signup. user:", user);
             return $http.post("/auth/signup", user);
@@ -27,6 +30,7 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
         this.login = function (user) {
             return $http.post("/auth/login", user).then(function (response) {
                 TokenService.setToken(response.data.token);
+                self.setUser(response.data.user);
                 return response;
             })
         };
@@ -34,8 +38,23 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
         this.logout = function () {
             console.log("UserService.logout");
             TokenService.removeToken();
+            this.removeUser();
             $location.path("/");
         };
+
+        this.setUser = function (user) {
+            console.log("setUser", user);
+            $localStorage.user = user;
+        };
+
+        this.getUser = function () {
+            console.log("getUser", this.currentUser);
+            return $localStorage.user;
+        }
+
+        this.removeUser = function () {
+            $localStorage.user = null;
+        }
     }])
 
     .service("TokenService", ["$localStorage", function ($localStorage) {
