@@ -3,7 +3,6 @@ var userRoutes = express.Router();
 var User = require("../models/user");
 
 userRoutes.put("/:id", function (req, res) {
-    console.log(req.params.id);
     console.log("before findOneAndUpdate:", req.body);
     User.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, existingUser) {
         if (existingUser === null) return res.status(500).send("No user found");
