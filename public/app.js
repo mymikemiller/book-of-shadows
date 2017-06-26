@@ -10,6 +10,10 @@ angular.module("BookOfShadowsApp", ["ngRoute", "Auth"])
                 templateUrl: "components/spells/allSpells/allSpells.html",
                 controller: "AllSpellsCtrl"
             })
+            .when("/spells/:spellId", {
+                templateUrl: "components/spells/singleSpell/singleSpell.html",
+                controller: "SingleSpellCtrl"
+            })
             .when("/mine", {
                 templateUrl: "components/spells/mySpells/mySpells.html",
                 controller: "MySpellsCtrl"
