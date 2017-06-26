@@ -68,6 +68,7 @@ spellRoutes.route("/:id")
         })
     })
     .delete(function (req, res) {
+        console.log("delete for ", req.params.id);
         Spell.findOneAndRemove({
             _id: req.params.id
         }, function (err, spell) {
