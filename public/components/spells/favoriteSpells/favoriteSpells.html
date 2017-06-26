@@ -1,7 +1,7 @@
 <h1>Favorite Spells</h1>
 
 <div class="row">
-    <div class="col-md-4" ng-repeat="spell in spells">
+    <div class="col-md-4" ng-repeat="spell in spells track by $index">
         <h3>{{spell.name}}</h3>
         <button ng-click="unfavoriteSpell(spell)">Unfavorite this spell</button>
     </div>
