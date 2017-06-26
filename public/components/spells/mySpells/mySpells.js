@@ -7,10 +7,23 @@ app.controller("MySpellsCtrl", ["$scope", "$http", "MySpellsService", function (
     // page loads to get the list of todos from the server
     (function getspells() {
         MySpellsService.getMySpells().then(function (spells) {
-            console.log(spells);
             $scope.spells = spells;
         });
     })();
+
+    $scope.deleteSpell = function (spell) {
+        console.log("attempting to delete", spell);
+        MySpellsService.deleteSpell(spell).then(function (spell) {
+            // Remove "spell" from scope
+            for (var i = 0; i < $scope.spells.length; i++) {
+                var theSpell = $scope.spells[i];
+                if (theSpell._id === spell._id) {
+                    console.log("splicing " + i + " out");
+                    $scope.spells.splice(i, 1);
+                }
+            }
+        });
+    }
 }]);
 
 app.service("MySpellsService", ["$http", function ($http) {
@@ -22,9 +35,10 @@ app.service("MySpellsService", ["$http", function ($http) {
         });
     };
 
-    this.favoriteSpell = function (user, spell) {
-        user.favorites.push(spell._id);
-        return $http.put("/users", user).then(function (response) {
+    this.deleteSpell = function (spell) {
+        var url = "/api/spells/" + spell._id;
+        console.log("calling http.delete " + url);
+        return $http.delete(url).then(function (response) {
             return response.data;
         }, function (response) {
             alert("Error " + response.status + ": " + response.statusText);
