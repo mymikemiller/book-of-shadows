@@ -1,5 +1,6 @@
 /*BASE STYLES
 colors: #e4e2d5
+another color; #bdb88d;
 */
 
 @font-face {
@@ -7,11 +8,14 @@ colors: #e4e2d5
     src: url(fonts/paganini-font/paganini/Paganini-SemiBold.ttf);
 }
 
-/*body {*/
+body {
     /*background: url("img/large-paper.jpg") no-repeat center center fixed;*/
     /*-webkit-background-size: cover;*/
     /*-moz-background-size: cover;*/
     /*-o-background-size: cover;*/
     /*background-size: cover;*/
-/*}*/
+    background-color: #e4e2d5;
+}
+
+
 
