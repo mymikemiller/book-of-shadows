@@ -15,6 +15,12 @@ var spellSchema = new Schema({
         required: true
     },
 
+    // A short description of the spell
+    summary: String,
+
+    // An image of the spell
+    image: String,
+
     // The category that the spell belongs to
     category: {
         type: String,
