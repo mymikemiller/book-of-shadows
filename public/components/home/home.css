@@ -1,13 +1,22 @@
 body {
-    background: url("../../img/large-paper.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /*background: url("../../img/large-paper.jpg") no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    background-color: #e4e2d5;
 }
-
-h1 {
+h1, h2, p {
     font-family: Paganini;
     text-align: center;
     font-size: 3.6em;
+    color: #522b26;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 2em;
 }
