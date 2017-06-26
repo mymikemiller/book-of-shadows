@@ -1,22 +1,75 @@
 body {
-    /*background: url("../../img/large-paper.jpg") no-repeat center center fixed;*/
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*-o-background-size: cover;*/
-    /*background-size: cover;*/
-    background-color: #e4e2d5;
+    background: url("../../img/book-fanta.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.icon-img {
+    position: absolute;
+    width: 5%;
+    top: 70px;
+    left: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 h1, h2, p {
     font-family: Paganini;
     text-align: center;
-    font-size: 3.6em;
-    color: #522b26;
+    font-size: 3.7em;
+    color: #e0e2ea;
+    margin-bottom: 0;
 }
 
 h1 {
     text-transform: uppercase;
 }
 
+.hero-img {
+    /*position: absolute;*/
+    /*top:  10%;*/
+    /*left: 50%;*/
+    margin: auto;
+    width: 15%;
+}
+
 p {
+    font-size: 1.6em;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.links {
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.browse {
+    color: #9da238;
     font-size: 2em;
+    text-decoration: none;
+}
+
+.btn {
+    color: white;
+    font-size: 1.2em;
+    width: 130px;
+    margin: 20px;
+}
+
+.login {
+    border: 3px solid rgb(189, 184, 141);;
+}
+
+.signup {
+    background-color: rgb(189, 184, 141);;
+    border: 3px solid rgb(189, 184, 141);;
 }
