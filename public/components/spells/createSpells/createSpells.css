@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.new-entry {
+    background-color: #9da238;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-bottom: 25px;
+}
+.input-entry {
+    text-align: center;
+}
+form {
+    padding: 30px;
+    border: 2px solid black;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: rgb(189, 184, 141);
+    color: #545614;
+    margin-top: 40px;
+    text-align: center;
+    width: 200px;
+}
