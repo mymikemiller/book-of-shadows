@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="components/spells/allSpells/allSpells.css" >
+
 <h1>Spells</h1>
 
 <div class="row">
-    <div class="col-md-4" ng-repeat="spell in spells track by $index">
+    <div class="col-xs-offset-1 col-xs-4 col-centered list-item" ng-repeat="spell in spells track by $index">
         <a ng-href="#!/spells/{{spell._id}}"><h3>{{spell.name}}</h3></a>
-        <button ng-click="favoriteSpell(spell)">Favorite this spell</button>
+        <button class="btn" ng-click="favoriteSpell(spell)"><img src="../../../img/icons/best.png"/>Favorite this spell</button>
     </div>
 </div>
