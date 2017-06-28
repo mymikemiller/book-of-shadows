@@ -1,6 +1,6 @@
 /*BASE STYLES
 colors: #e4e2d5
-another color; #bdb88d;
+another color; bdb88d;
 */
 
 @font-face {
@@ -15,6 +15,17 @@ body {
     /*-o-background-size: cover;*/
     /*background-size: cover;*/
     background-color: #e4e2d5;
+}
+
+h1 {
+    font-family: Paganini;
+}
+
+.btn {
+    color: white;
+    font-size: 1.2em;
+    width: 130px;
+    margin: 20px;
 }
 
 
