@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-xs-offset-1 col-xs-4 col-centered list-item" ng-repeat="spell in spells track by $index">
-        <h3>{{spell.name}}</h3>
+        <a ng-href="#!/spells/{{spell._id}}"><h3>{{spell.name}}</h3></a>
         <h5>{{spell.summary}}</h5>
         <button class="btn" ng-click="unfavoriteSpell(spell)"><img src="../../../img/icons/worst.png" alt="x img"/>Unfavorite
             this spell

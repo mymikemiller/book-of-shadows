@@ -1,12 +1,21 @@
+<link rel="stylesheet" href="components/spells/singleSpell/singleSpell.css">
+
 <section id="display-spell">
-    <h2>{{singleSpell.name}} </h2>
-    <h4>{{singleSpell.summary}} </h4>
-    <img src={{singleSpell.image}}></img>
-    <h4><a href=/#!/spells?category={{singleSpell.category}}>{{singleSpell.category}}</a></h4>
-    <p>{{singleSpell.instructions}}</p>
-    <ul>
-        <li>Ingredients:</li>
-        <li ng-repeat="ingredient in singleSpell.ingredients">{{ingredient}}</li>
-    </ul>
-    <p>{{singleSpell.difficulty}}</p>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <h1>{{singleSpell.name}} </h1>
+            <h4>{{singleSpell.summary}} </h4>
+            <h3>Difficulty: {{singleSpell.difficulty}} / 5</h3>
+            <h4>Category: <a href=/#!/spells?category={{singleSpell.category}}>{{singleSpell.category}}</a></h4>
+            <img src={{singleSpell.image}}></img>
+
+            <h2>Ingredients</h2>
+
+            <ol>
+                <li ng-repeat="ingredient in singleSpell.ingredients">{{ingredient}}</li>
+            </ol>
+
+            <p>{{singleSpell.instructions}}</p>
+        </div>
+    </div>
 </section>
