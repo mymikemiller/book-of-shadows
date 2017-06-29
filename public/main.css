@@ -21,6 +21,10 @@ h1 {
     font-family: Paganini;
 }
 
+h2, h3, h4, h5 {
+    color: white;
+}
+
 .btn {
     color: white;
     font-size: 1.2em;

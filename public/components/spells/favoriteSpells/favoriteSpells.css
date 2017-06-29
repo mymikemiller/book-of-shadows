@@ -9,9 +9,12 @@ h1 {
 }
 
 h3 {
-    color: #e0e2ea;
     font-family: Paganini;
     margin-top: 0;
+}
+
+h2, h3, h4, h5 {
+    color: #e0e2ea;
 }
 
 img {
