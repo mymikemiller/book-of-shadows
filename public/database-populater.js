@@ -7,6 +7,7 @@ this.populateDatabase = function (SpellsService) {
             name: "Rune Spell of Protection",
             summary: "This particular rune magick spell will offer protection from outside forces, but also from forces within us. We don’t always need protection from the outside, but may need a little boost in harmony within ourselves and with others around us. This spell will provide a protection barrier on all aspects.",
             image: "http://wiccanspells.info/wp-content/uploads/2017/06/rune-magick-etsy.jpg",
+            difficulty: 3,
             ingredients: [
                 "5 white candles",
                 "An instrument to carve runes into the candles",
@@ -22,6 +23,7 @@ this.populateDatabase = function (SpellsService) {
             name: "Tiger’s Eye Confidence Spell",
             summary: "This is a simple confidence spell to increase your self-esteem and self-worth. It uses tiger’s eye, a crystal which strengthens the solar plexus chakra. The solar plexus is the seat of our will, and a weakened solar plexus may manifest in lack of confidence. Tiger’s eye is also a crystal that combines solar and earth energy, producing a vibration of grounded confidence.",
             image: "http://wiccanspells.info/wp-content/uploads/2016/04/tigers-eye-crystals-300x254.jpg",
+            difficulty: 3,
             ingredients: [
                 "A golden candle",
                 "Tiger’s eye or orgonite with tiger’s eye",
@@ -36,6 +38,7 @@ this.populateDatabase = function (SpellsService) {
             name: "A Spell to Break a Bad Habit",
             summary: "This is a very simple candle spell that can be used to break any bad habit. This should be performed during a waning moon.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/a-spell-to-get-rid-of-a-bad-habit-224x300.jpg",
+            difficulty: 3,
             ingredients: [
                 "A candle (black is the best colour for this)",
                 "Pen",
@@ -49,6 +52,7 @@ this.populateDatabase = function (SpellsService) {
             name: "A Full Moon Love Spell",
             summary: "If you want to attract love into your life, perform this spell underneath a full moon.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/Full-moon-love-spell-wicca-300x199.jpg",
+            difficulty: 3,
             ingredients: [
                 "A red candle",
                 "A pink candle",
@@ -68,6 +72,7 @@ this.populateDatabase = function (SpellsService) {
             name: "A Spell to Find a Job",
             summary: "This is a spell which will help you attract a new job.  It is best to perform this job spell on the night of a full moon, or even during a waxing moon.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/spell-to-find-a-job-300x199.jpg",
+            difficulty: 3,
             ingredients: [
                 "A brown candle",
                 "A green candle",
@@ -82,6 +87,7 @@ this.populateDatabase = function (SpellsService) {
             name: "Herbal Love Potion",
             summary: "This herbal love potion is not meant to be drunk, but is to be worn like perfume to attract love into your life.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/love-potion-tincture-300x238.jpg",
+            difficulty: 3,
             ingredients: [
                 "Brandy or vodka",
                 "A glass jar",
