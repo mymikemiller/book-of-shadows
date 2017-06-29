@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.list-item {
+    background-color: #9da238;
+    padding: 20px;
+}
+
+h3 {
+    color: #e0e2ea;
+    font-family: Paganini;
+    margin-top: 0;
+}
+
+img {
+    padding-right: 5px;
+    width: 15%;
+}
+
+.btn {
+    background-color: rgb(189, 184, 141);
+    color: #545614;
+    width: 200px;
+}

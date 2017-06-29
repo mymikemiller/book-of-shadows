@@ -7,7 +7,10 @@
     <input type="text" ng-model="spell.summary" placeholder="Summary" ng-minlength="1">
     <input type="text" ng-model="spell.image" placeholder="Image URL" ng-minlength="1">
     <input type="text" ng-model="spell.instructions" placeholder="Spell Instructions" ng-minlength="1">
-    <input type="text" ng-model="spell.link" placeholder="Link">
+    <input type="text" ng-model="spell.link" placeholder="link">
     <input type="number" ng-model="spell.difficulty" placeholder="Level of Difficulty">
+    </div>
+        <div class="col-xs-offset-4 col-xs-4 submit-btn">
     <button class="btn" type='submit' ng-click="addSpell(spell)">Submit</button>
+        </div>
 </form>
