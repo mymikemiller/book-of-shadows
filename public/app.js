@@ -26,6 +26,10 @@ angular.module("BookOfShadowsApp", ["ngRoute", "Auth"])
                 templateUrl: "components/spells/createSpells/createSpells.html",
                 controller: "CreateSpellCtrl"
             })
+            .when("/login", {
+                templateUrl: "components/auth/login/login.html",
+                controller: "LoginCtrl"
+            })
             .otherwise("/home", {
                 redirectTo: "components/home/home.html"
             })
