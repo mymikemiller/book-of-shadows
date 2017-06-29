@@ -11,7 +11,25 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-      <navbar></navbar>
+    <nav class="navbar navbar-default" ng-controller="LoginCtrl">
+    <div class="container-fluid">
+          {{isUserLoggedIn}}
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#!/home">Home</a></li>
+                <li><a href="#!/spells">All Spells</a></li> 
+                <li><a href="#!/mine">My Spells</a></li>
+                <li><a href="#!/favorites">Favorite Spells</a></li>
+                <li><a href="#!/create-spell">Create Spell</a></li>
+                <li><a href="#!/login/" ng-if="!isUserLoggedIn">Log In</a></li>
+                <li><a href="#!/signup/" ng-if="!isUserLoggedIn">Signup</a></li>
+                <li><a href="#!/logout/" ng-if="isUserLoggedIn">Log Out</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
   
 <ng-view></ng-view>
 
@@ -24,7 +42,6 @@
 <script src="app.js"></script>
 
 <!--components-->
-<script src="components/directives/navbar/navbar.js"></script>
 <script src="components/home/home.js"></script>
 <script src="components/spells/allSpells/allSpells.js"></script>
 <script src="components/spells/mySpells/mySpells.js"></script>
@@ -41,6 +58,7 @@
 <script src="components/auth/login/login.js"></script>
 <script src="components/auth/logout/logout.js"></script>
 <script src="database-populater.js"></script>
+<script src="services/isLog.js"></script>
 
 </body>
 </html>
