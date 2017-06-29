@@ -1,16 +1,71 @@
-<link rel="stylesheet" href="components/createSpells/createSpells.js">
+<link rel="stylesheet" href="components/createSpells/createSpells.css">
 
-<form class="new-entry">
-    <h2>Add A New Spell</h2>
-    <input type="text" ng-model="spell.name" placeholder="Name of Spell" ng-minlength="1">
-    <input type="text" ng-model="spell.category" placeholder="Category(e.g. love, health)" ng-minlength="1">
-    <input type="text" ng-model="spell.summary" placeholder="Summary" ng-minlength="1">
-    <input type="text" ng-model="spell.image" placeholder="Image URL" ng-minlength="1">
-    <input type="text" ng-model="spell.instructions" placeholder="Spell Instructions" ng-minlength="1">
-    <input type="text" ng-model="spell.link" placeholder="link">
-    <input type="number" ng-model="spell.difficulty" placeholder="Level of Difficulty">
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h1>Create Spell</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" class="form-control" ng-model="spell.name" placeholder="Name of Spell"
+                       ng-minlength="1">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input id="category" type="text" class="form-control" ng-model="spell.category"
+                       placeholder="Category (e.g. love, health)" ng-minlength="1">
+            </div>
+
+            <div class="form-group">
+                <label for="summary">Summary</label>
+                <textarea rows="4" cols="50" id="summary" class="form-control" ng-model="spell.summary"
+                          placeholder="Summary"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input id="image" type="text" ng-model="spell.image" placeholder="Image URL" class="form-control"
+                       ng-model="spell.image" ng-minlength="1">
+            </div>
+
+            <h4>Press "Add Ingredient" to add an ingredient</h4>
+            <input class="form-control" ng-repeat="ingredient in spell.ingredients track by $index" type='text'
+                   ng-model='spell.ingredients[$index]'
+                   placeholder='Ingredient' ng-minlength="1">
+            <div>
+                <button class="center-block btn btn-secondary btn-sm" ng-click="addIngredient(ingredient)">Add
+                    Ingredient
+                </button>
+            </div>
+
+            <div class="form-group">
+                <label for="instructions">Instructions</label>
+                <textarea rows="4" cols="50" id="instructions" class="form-control" ng-model="spell.instructions"
+                          placeholder="Instructions"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="link">Link to detailed instructions</label>
+                <input id="link" type="text" ng-model="spell.link" placeholder="URL (Optional)" class="form-control"
+                       ng-model="spell.link" ng-minlength="1">
+            </div>
+
+            <div class="form-group">
+                <label for="difficulty">Difficulty</label>
+                <input id="difficulty" type="number" ng-model="spell.difficulty" placeholder="Difficulty (Out of 5)"
+                       class="form-control" ng-model="spell.difficulty">
+            </div>
+
+            <form class="new-entry">
+
+                <div class="col-xs-offset-4 col-xs-4 submit-btn">
+                    <button class="center-block btn btn-primary btn-lg" type='submit' ng-click="addSpell(spell)">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </form>
     </div>
-        <div class="col-xs-offset-4 col-xs-4 submit-btn">
-    <button class="btn" type='submit' ng-click="addSpell(spell)">Submit</button>
-        </div>
-</form>
+</div>
+
+
