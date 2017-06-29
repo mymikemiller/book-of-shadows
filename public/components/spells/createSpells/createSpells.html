@@ -1,14 +1,14 @@
-<link rel="stylesheet" href="components/spells/createSpells/createSpells.css">
+<link rel="stylesheet" href="components/createSpells/createSpells.js">
 
-
-    <h1>Add A New Spell</h1>
-<form class="row new-entry">
-    <div class="input-entry">
+<form class="new-entry">
+    <h2>Add A New Spell</h2>
     <input type="text" ng-model="spell.name" placeholder="Name of Spell" ng-minlength="1">
     <input type="text" ng-model="spell.category" placeholder="Category(e.g. love, health)" ng-minlength="1">
+    <input type="text" ng-model="spell.summary" placeholder="Summary" ng-minlength="1">
+    <input type="text" ng-model="spell.image" placeholder="Image URL" ng-minlength="1">
     <input type="text" ng-model="spell.instructions" placeholder="Spell Instructions" ng-minlength="1">
     <input type="text" ng-model="spell.link" placeholder="link">
-    <input type="number" ng-model="spell.difficulty" placeholder="Level of Deifficulty">
+    <input type="number" ng-model="spell.difficulty" placeholder="Level of Difficulty">
     </div>
         <div class="col-xs-offset-4 col-xs-4 submit-btn">
     <button class="btn" type='submit' ng-click="addSpell(spell)">Submit</button>

@@ -16,3 +16,4 @@ bower_components/
 *.rar
 *.tar
 *.7z
+npm-debug.log
