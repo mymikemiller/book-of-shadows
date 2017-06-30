@@ -5,13 +5,16 @@ h1 {
 
 .list-item {
     background-color: #9da238;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 h3 {
-    color: #e0e2ea;
     font-family: Paganini;
     margin-top: 0;
+}
+
+h2, h3, h4, h5 {
+    color: #e0e2ea;
 }
 
 img {

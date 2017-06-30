@@ -7,6 +7,7 @@ this.populateDatabase = function (SpellsService) {
             name: "Rune Spell of Protection",
             summary: "This particular rune magick spell will offer protection from outside forces, but also from forces within us. We don’t always need protection from the outside, but may need a little boost in harmony within ourselves and with others around us. This spell will provide a protection barrier on all aspects.",
             image: "http://wiccanspells.info/wp-content/uploads/2017/06/rune-magick-etsy.jpg",
+            difficulty: 3,
             ingredients: [
                 "5 white candles",
                 "An instrument to carve runes into the candles",
@@ -22,6 +23,7 @@ this.populateDatabase = function (SpellsService) {
             name: "Tiger’s Eye Confidence Spell",
             summary: "This is a simple confidence spell to increase your self-esteem and self-worth. It uses tiger’s eye, a crystal which strengthens the solar plexus chakra. The solar plexus is the seat of our will, and a weakened solar plexus may manifest in lack of confidence. Tiger’s eye is also a crystal that combines solar and earth energy, producing a vibration of grounded confidence.",
             image: "http://wiccanspells.info/wp-content/uploads/2016/04/tigers-eye-crystals-300x254.jpg",
+            difficulty: 3,
             ingredients: [
                 "A golden candle",
                 "Tiger’s eye or orgonite with tiger’s eye",
@@ -36,6 +38,7 @@ this.populateDatabase = function (SpellsService) {
             name: "A Spell to Break a Bad Habit",
             summary: "This is a very simple candle spell that can be used to break any bad habit. This should be performed during a waning moon.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/a-spell-to-get-rid-of-a-bad-habit-224x300.jpg",
+            difficulty: 3,
             ingredients: [
                 "A candle (black is the best colour for this)",
                 "Pen",
@@ -49,6 +52,7 @@ this.populateDatabase = function (SpellsService) {
             name: "A Full Moon Love Spell",
             summary: "If you want to attract love into your life, perform this spell underneath a full moon.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/Full-moon-love-spell-wicca-300x199.jpg",
+            difficulty: 3,
             ingredients: [
                 "A red candle",
                 "A pink candle",
@@ -61,13 +65,14 @@ this.populateDatabase = function (SpellsService) {
                 "Pink cord or yarn"
             ],
             instructions: "Gather everything you need in your sacred space underneath the full moon, and cast your circle.  Light both your candles, and lay the red cloth in front of you.  Take the moonstone, and pass it over the flames of both candles, and then lay the crystal on the cloth.  Do the same for the rose quartz. Now take the two apple seeds, and say: By the light of the full moon, I now plant the seeds of our love. As you place the seeds on the cloth, next to the crystals, see a beautiful, soft pink energy emanating from the crystals, nourishing the seeds with loving energy.  Sprinkle the stones and seeds with the basil and cinnamon.  Lastly, pull the corners of the red cloth together, with the stones, seeds and herbs inside, and wind the pink cord around the bag three times, before tying it with three knots.  Say: So mote it be. And close your circle. Keep your charm bag close to you always in order to attract love into your life.",
-            category: "Love Spells",
+            category: "Love",
             link: "http://wiccanspells.info/a-full-moon-love-spell/",
         },
         {
             name: "A Spell to Find a Job",
             summary: "This is a spell which will help you attract a new job.  It is best to perform this job spell on the night of a full moon, or even during a waxing moon.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/spell-to-find-a-job-300x199.jpg",
+            difficulty: 3,
             ingredients: [
                 "A brown candle",
                 "A green candle",
@@ -82,6 +87,7 @@ this.populateDatabase = function (SpellsService) {
             name: "Herbal Love Potion",
             summary: "This herbal love potion is not meant to be drunk, but is to be worn like perfume to attract love into your life.",
             image: "http://wiccanspells.info/wp-content/uploads/2015/10/love-potion-tincture-300x238.jpg",
+            difficulty: 3,
             ingredients: [
                 "Brandy or vodka",
                 "A glass jar",
@@ -94,7 +100,7 @@ this.populateDatabase = function (SpellsService) {
                 "Glass dropper bottles to store the tincture (such as this)"
             ],
             instructions: "The herbs can be fresh or dried. The quantities that you need for the love potion depend on the size of the jar – if the herbs are dried, the jar should be halfway full of herbs, if they are fresh, the jar should be three-quarters full. Try to use the same quantities of each herb if possible. This love potion should be created during a waxing moon, preferably on the first day. The tincture will be left in the jar for about a week for the herbs to soak into the alcohol. Creating the herbal love potion: Gather all your ingredients, and cast your circle. Next, put all the herbs in the red cloth and fold it up. Hold the cloth in your hands, and visualise a beautiful, pink beam of light emanating from your heart and pouring onto the red cloth, infusing the herbs. Do this for a few minutes, and then say the following: “With these sacred herbs I draw love into my life” Now put the herbs inside the glass jar, and pour the alcohol into it. Then put the lid on, hold the jar in your hands, and repeat the visualisation of pink light beaming from your heart and infusing the jar. Say the following: “As the moon grows full, so shall this love potion grow strong” Now close your circle. Leave the jar with the tincture in a cool, dark place (e.g. a kitchen cupboard) for a week or so. On the day of the full moon, strain the tincture with cheesecloth. The resulting liquid is your tincture. Store your love potion in a dark glass dropper bottle (or more than one, depending on how much tincture you have). When you want to use it to attract love, put a drop on each wrist, the same as you would with a perfume",
-            category: "Love Spells",
+            category: "Love",
             link: "http://wiccanspells.info/herbal-love-potion/",
         }];
 
