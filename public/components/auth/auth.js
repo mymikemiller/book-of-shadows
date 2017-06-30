@@ -1,4 +1,4 @@
-angular.module("Auth", ["ngRoute", "ngStorage"])
+angular.module("Auth", ["ngRoute", "ngStorage", "isLogin"])
 
     .config(["$routeProvider", "$httpProvider", function ($routeProvider, $httpProvider) {
         $routeProvider
@@ -18,7 +18,7 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
         $httpProvider.interceptors.push("AuthInterceptor");
     }])
 
-    .service("UserService", ["$http", "TokenService", "$location", "$localStorage", function ($http, TokenService, $location, $localStorage) {
+    .service("UserService", ["$http", "TokenService", "$location", "$localStorage", "isLogin", function ($http, TokenService, $location, $localStorage, isLogin) {
         this.currentUser = null;
         var self = this;
 
@@ -31,6 +31,9 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
             return $http.post("/auth/login", user).then(function (response) {
                 TokenService.setToken(response.data.token);
                 self.setUser(response.data.user);
+                $localStorage.user = response.data.user;
+                isLogin.setLogin();
+                console.log("Here in login" , isLogin.login);
                 return response;
             })
         };
@@ -39,7 +42,10 @@ angular.module("Auth", ["ngRoute", "ngStorage"])
             console.log("UserService.logout");
             TokenService.removeToken();
             this.removeUser();
+            console.log("Im here mofo");
             $location.path("/");
+            $localStorage.user = null;
+            isLogin.removeLogin();;
         };
 
         this.setUser = function (user) {
